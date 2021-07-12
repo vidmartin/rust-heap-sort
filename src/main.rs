@@ -74,6 +74,7 @@ fn heap_sort(arr: &mut [i32]) {
     }
 }
 
+// spojí věci do řetězce
 fn str_chain<T: Iterator>(join: &str, mut iter: T) -> String where T::Item: ToString {
 
     let mut s = match iter.next() {
@@ -89,6 +90,7 @@ fn str_chain<T: Iterator>(join: &str, mut iter: T) -> String where T::Item: ToSt
     return s;
 }
 
+// zkontroluje, zdali je pole srovnané
 fn check_sorted(arr: &[i32]) -> bool {
     let mut iter = arr.iter();
     let last = match iter.next() {
